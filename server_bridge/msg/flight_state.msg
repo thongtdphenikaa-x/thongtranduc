@@ -1,0 +1,3 @@
+int8 flight_phase
+bool is_armed
+int8 drone_status

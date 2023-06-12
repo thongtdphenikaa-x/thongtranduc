@@ -1,0 +1,7 @@
+float32 outside_temp
+float32 inside_temp
+float32 outside_hum
+float32 inside_hum
+float32 wind_speed
+uint8 rain
+float32 wind_direction
