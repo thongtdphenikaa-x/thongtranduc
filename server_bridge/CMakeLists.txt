@@ -67,7 +67,10 @@ add_message_files(
   cmd_ack.msg
   cmd.msg
   current_plan.msg
-)
+  box_info.msg
+  box_status.msg
+  weather.msg
+  )
 
 ## Generate services in the 'srv' folder
 # add_service_files(

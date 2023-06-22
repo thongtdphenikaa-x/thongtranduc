@@ -41,3 +41,23 @@ bridge:
     msg_type: server_bridge.msg:cmd
     topic_from: box_ID/server2box/command
     topic_to: /mqtt_bridge/cmd
+ # mqtt_bridge/cmd_ack to boxid/box2server/command_ack PHAN HOI NHAN TRANG THAI
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: server_bridge.msg:cmd_ack
+    topic_from: /mqtt_bridge/cmd_ack
+    topic_to: box_ID/box2server/command_ack
+     # mqtt_bridge/box_info to boxid/box2server/box_info THONG TIN VI TRI
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: server_bridge.msg:box_info
+    topic_from: /mqtt_bridge/box_info
+    topic_to: boxid/box2server/box_info
+     # mqtt_bridge/box_status to boxid/box2server/box_status THONG TIN PIN VA TRANG THAI
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: server_bridge.msg:box_status
+    topic_from: /mqtt_bridge/box_status
+    topic_to: boxid/box2server/box_status
+     # mqtt_bridge/box_weather to boxid/box2server/box_status THONG TIN MOI TRUONG THOI TIET
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: server_bridge.msg:weather
+    topic_from: /mqtt_bridge/box_weather
+    topic_to: boxid/box2server/box_weather
